@@ -35,7 +35,7 @@ EXPOSE 2181/tcp 9092/tcp
 
 Optionally build with a different version, `docker build --build-arg=KAFKA_VERSION=0.11.0.2 .`.
 ```
-ARG KAFKA_VERSION=1.0.0
+ARG KAFKA_VERSION=1.1.0
 ARG SCALA_VERSION=2.11
 ```
 
