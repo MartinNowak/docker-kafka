@@ -29,4 +29,4 @@ VOLUME /var/lib/kafka
 
 CMD sed -i "s|^broker.id=.*$|broker.id=$BROKER_ID|" /opt/kafka/config/server.properties && \
     /opt/kafka/bin/zookeeper-server-start.sh -daemon /opt/kafka/config/zookeeper.properties && \
-    /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties
+    exec /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties
