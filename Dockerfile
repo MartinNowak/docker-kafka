@@ -2,8 +2,8 @@ FROM openjdk:8-jre-alpine
 
 MAINTAINER martinnowak
 
-ARG KAFKA_VERSION=1.0.0
-ARG SCALA_VERSION=2.11
+ARG KAFKA_VERSION=1.1.1
+ARG SCALA_VERSION=2.12
 # generate unique id by default
 ENV BROKER_ID=-1
 EXPOSE 2181/tcp 9092/tcp
