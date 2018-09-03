@@ -47,5 +47,3 @@ Optionally build with a different version, `docker build --build-arg=KAFKA_VERSI
 ARG KAFKA_VERSION=1.0.0
 ARG SCALA_VERSION=2.11
 ```
-
-
