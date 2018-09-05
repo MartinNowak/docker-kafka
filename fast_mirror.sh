@@ -47,12 +47,11 @@ show_results=false
 mirrors_custom=""
 #
 # At least one published mirror that should generally be reachable
-
 mirrors_published="
-http://dl-cdn.alpinelinux.org/alpine/
 http://nl.alpinelinux.org/alpine/
 http://uk.alpinelinux.org/alpine/
 http://dl-2.alpinelinux.org/alpine/
+http://dl-cdn.alpinelinux.org/alpine/
 http://dl-3.alpinelinux.org/alpine/
 http://dl-4.alpinelinux.org/alpine/
 http://dl-5.alpinelinux.org/alpine/
