@@ -8,6 +8,9 @@ ARG SCALA_VERSION=2.12
 ENV BROKER_ID=-1
 EXPOSE 2181/tcp 9092/tcp
 
+ADD fast_mirror.sh /fast_mirror.sh
+RUN sh /fast_mirror.sh
+
 RUN wget --quiet "http://www.apache.org/dyn/closer.cgi?action=download&filename=/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz" -O /tmp/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz && \
     wget --quiet https://www.apache.org/dist/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz.asc -P /tmp/ && \
     wget --quiet https://kafka.apache.org/KEYS -P /tmp/ && \
