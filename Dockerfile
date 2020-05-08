@@ -2,7 +2,7 @@ FROM openjdk:8-jre-alpine
 
 MAINTAINER martinnowak
 
-ARG KAFKA_VERSION=1.0.0
+ARG KAFKA_VERSION=1.1.0
 ARG SCALA_VERSION=2.11
 # generate unique id by default
 ENV BROKER_ID=-1
@@ -29,4 +29,4 @@ VOLUME /var/lib/kafka
 
 CMD sed -i "s|^broker.id=.*$|broker.id=$BROKER_ID|" /opt/kafka/config/server.properties && \
     /opt/kafka/bin/zookeeper-server-start.sh -daemon /opt/kafka/config/zookeeper.properties && \
-    /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties
+    exec /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties
