@@ -17,7 +17,7 @@ RUN wget --quiet "http://archive.apache.org/dist/kafka/${KAFKA_VERSION}/kafka_${
     gpgconf --kill gpg-agent && \
     apk del --purge gnupg && \
     rm -r ~/.gnupg && \
-    mkdir /opt && \
+    mkdir -p /opt && \
     tar -C /opt -zxf /tmp/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz && \
     rm /tmp/KEYS /tmp/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz /tmp/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz.asc && \
     ln -s kafka_${SCALA_VERSION}-${KAFKA_VERSION} /opt/kafka && \
