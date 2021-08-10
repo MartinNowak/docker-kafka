@@ -23,7 +23,7 @@ RUN wget --quiet "http://archive.apache.org/dist/kafka/${KAFKA_VERSION}/kafka_${
     ln -s kafka_${SCALA_VERSION}-${KAFKA_VERSION} /opt/kafka && \
     sed -i 's|^log.dirs=.*$|log.dirs=/var/lib/kafka|' /opt/kafka/config/server.properties && \
     # for kafka scripts
-    apk add --no-cache bash
+    apk add --no-cache bash gcompat
 
 VOLUME /var/lib/kafka
 
